@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://it5nf8euqlwj"]
+
+[ext_resource type="Script" path="res://addons/logger_plugin/scripts/SLoggerSystemBuddy.cs" id="1_q46yj"]
+
+[node name="S_LoggerSystemBuddy" type="Node"]
+script = ExtResource("1_q46yj")

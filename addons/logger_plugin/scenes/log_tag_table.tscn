@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://8pymfv33aq1y"]
+
+[ext_resource type="Script" path="res://addons/logger_plugin/scripts/LogTagTable.cs" id="1_d0q7k"]
+
+[node name="LogTagTable" type="ScrollContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+script = ExtResource("1_d0q7k")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(160, 750)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="ItemList" type="ItemList" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 3
+item_0/text = "Enabled"
+item_0/selectable = false
+item_1/text = "Loggable to file"
+item_1/selectable = false
+item_2/text = "Verbose"
+item_2/selectable = false
+
+[node name="BoxContainer" type="BoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -35.0
+offset_top = 4.0
+offset_bottom = 89.0
+grow_horizontal = 0
+vertical = true
+
+[node name="EnableCheck" type="CheckBox" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="LoggableCheck" type="CheckBox" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="VerboseCheck" type="CheckBox" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="DeleteButton" type="Button" parent="Control"]
+modulate = Color(0.952941, 0, 0.145098, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Delete Tag"
